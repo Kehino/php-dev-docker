@@ -45,9 +45,9 @@ catch (PDOException $e) {
 } ?>
           <p>The default settings of the MariaDB database are:</p>
           <ul>
-            <li><b>Server:</b> db</li>
-            <li><b>User:</b> root</li>
-            <li><b>Password:</b> root</li>
+            <li><b>Server:</b> <code>db</code></li>
+            <li><b>User:</b> <code>root</code></li>
+            <li><b>Password:</b> <code>root</code></li>
           </ul>
 
           <h2>Database interface</h2>
@@ -55,12 +55,12 @@ catch (PDOException $e) {
 
           <p><a class="button is-link" href="http://localhost:8080" target="_blank">Open the database UI</a></p>
 
-          <h2>Using the dependency manager for PHP</h2>
-          <p>This also includes a <code>composer</code> container with <em>Composer</em>, <a href="https://getcomposer.org/doc/00-intro.md">a dependency manager for PHP projects</a>, which can be used with the following command:</p>
+          <h2>PHP dependency manager</h2>
+          <p>The <code>php</code> container is shipped with <em>Composer</em>, <a href="https://getcomposer.org/doc/00-intro.md">a dependency manager for PHP projects</a>, which can be used with the following command:</p>
 
           <div class="field has-addons">
             <div class="control is-expanded">
-            <input class="input" type="text" readonly="readonly" name="command-composer" id="command-composer" value="docker compose run --rm --interactive --tty --user $(id -u):$(id -g) composer"/>
+            <input class="input" type="text" readonly="readonly" name="command-composer" id="command-composer" value="./tools/composer.sh"/>
             </div>
             <div class="control">
               <button onclick="copyButton()" class="button is-dark">
